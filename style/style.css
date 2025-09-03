@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/*#############
+Color variables
+###############*/
+/*#######################
+Misc properties variables
+########################*/
+/*#############
+Sizes variables
+##########€####*/
+/*#############
+Functions parts
+###############*/
+/* pour respecter le format des bouts de teste que le site met en place
+doit faire partie d'une div, et utiliser*/
+@media (max-width: 800px) {
+  .discared_from_responsive {
+    display: none;
+  }
+}
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0px;
+}
+
+.navbar_root {
+  /*Temp color pour debug*/
+  background-color: white;
+}
+.navbar_root .navbar_container {
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar_root .navbar_container .logo_container {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar_root .navbar_container .logo_container .logo {
+  width: 90px;
+  height: 90px;
+}
+.navbar_root .navbar_container .logo_container .logo_text {
+  font-size: 40px;
+}
+.navbar_root .navbar_container .navbar_buttons_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.header_showcase {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/media/showcase_background.jpg);
+  height: 400px;
+  background-size: cover;
+  background-position-y: 50%;
+  width: device-width;
+  padding: 10%;
+}
+.header_showcase .showcase_text_container {
+  color: white;
+  gap: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.header_showcase .showcase_text_container .name_highlight {
+  color: yellow;
+  font-size: 30px;
+  font-weight: 700;
+}
+.header_showcase .showcase_text_container .title_highlight {
+  font-size: 50px;
+  color: white;
+}
+.header_showcase .showcase_text_container .paragraph_highlight {
+  width: 400px;
+  color: white;
+}
+
+.btn {
+  transition: all 0.3s;
+  color: black;
+  background: white;
+  border-radius: 10px;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn:hover {
+  transition: all 0.3s;
+  color: black;
+  background: #cccccc;
+  border-radius: 10px;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_filled {
+  transition: all 0.3s;
+  color: black;
+  background: yellow;
+  border-radius: 10px;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_filled:hover {
+  transition: all 0.3s;
+  color: black;
+  background: #cccc00;
+  border-radius: 10px;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*when desktop or higher*/
+@media (min-width: 800px) {
+  #hamburger_menu {
+    display: none;
+  }
+}
+/*when phone mode*/
+@media (max-width: 800px) {
+  .navbar_buttons_container {
+    width: 70px !important;
+    height: 70px !important;
+    margin-right: 2% !important;
+    margin-left: 2% !important;
+  }
+  #hamburger_menu {
+    object-fit: cover;
+    object-position: center;
+  }
+  #burger {
+    width: 80%;
+    height: 80%;
+  }
+  .showcase_text_container {
+    transition: all 0.3s;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+  }
+  .header_showcase {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/media/showcase_background.jpg);
+    background-position-x: center;
+  }
+  #call_to_action {
+    display: flex;
+  }
+}
+/*#############
+Color variables
+###############*/
+/*#######################
+Misc properties variables
+########################*/
+/*#############
+Sizes variables
+##########€####*/
+/*#############
+Functions parts
+###############*/
+/* pour respecter le format des bouts de teste que le site met en place
+doit faire partie d'une div, et utiliser*/
+@media (max-width: 800px) {
+  .discared_from_responsive {
+    display: none;
+  }
+}
+.who_are_we {
+  background-color: white;
+  height: 800px;
+}
+.who_are_we #center_text {
+  margin-top: 70px;
+  margin: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+.who_are_we .who_are_we_container {
+  margin: 120px;
+  margin-left: 8%;
+  margin-right: 8%;
+  gap: 15%;
+  justify-content: center;
+  display: flex;
+}
+.who_are_we .who_are_we_container .yellow_stylish {
+  position: relative;
+  display: flex;
+  background-color: yellow;
+  width: 50%;
+  height: 50%;
+  right: 30px;
+  bottom: 480px;
+  z-index: 1;
+}
+.who_are_we .who_are_we_container .who_are_we_muckshot {
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  width: 400px;
+  height: 450px;
+  z-index: 2;
+}
+.who_are_we .who_are_we_container .who_are_we_text_container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.who_are_we .who_are_we_container .who_are_we_text_container .name_highlight {
+  color: yellow;
+  font-size: 30px;
+  font-weight: 700;
+}
+.who_are_we .who_are_we_container .who_are_we_text_container .title_highlight {
+  font-size: 50px;
+  color: black;
+}
+.who_are_we .who_are_we_container .who_are_we_text_container .paragraph_highlight {
+  width: 400px;
+  color: black;
+}
+.who_are_we .who_are_we_container .who_are_we_text_container #who_are_we_text_resize {
+  font-size: 20px;
+}
+.who_are_we .who_are_we_container .who_are_we_text_container #darken_highlight {
+  color: #cccc00;
+}
+
+@media (max-width: 800px) {
+  .yellow_stylish {
+    height: 350px !important;
+  }
+  .who_are_we_container {
+    flex-direction: column;
+    margin-top: 2% !important;
+  }
+  .who_are_we_text_container {
+    width: 90% !important;
+    gap: 10%;
+  }
+}
+/*#############
+Color variables
+###############*/
+/*#######################
+Misc properties variables
+########################*/
+/*#############
+Sizes variables
+##########€####*/
+/*#############
+Functions parts
+###############*/
+/* pour respecter le format des bouts de teste que le site met en place
+doit faire partie d'une div, et utiliser*/
+@media (max-width: 800px) {
+  .discared_from_responsive {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

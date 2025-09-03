@@ -1,0 +1,106 @@
+@import "variable";
+
+.who_are_we
+{
+    background-color: $website-background-color;
+    height: $who_are_we_heigh;
+    
+    #center_text
+    {
+        margin-top: 70px;
+        margin: 50px;
+        font-size: 40px;
+        text-align: center;
+
+    }    
+
+    .who_are_we_container
+    {
+        margin: 120px;
+        margin-left: 8%;
+        margin-right: 8%;
+
+        gap: 15%;
+        justify-content: center;
+        display: flex;
+        
+
+
+        .yellow_stylish
+        {
+            position: relative;
+            display: flex;
+            background-color: $contrasted_color;
+            width: 50%;
+            height: 50%;
+            
+            right: 30px;
+            bottom: 480px;
+
+            z-index: 1;
+
+        }
+
+        .who_are_we_muckshot
+        {
+            position: relative;
+            object-fit: cover;
+            object-position: center;
+
+            width: 400px;
+            height: 450px;
+     
+            z-index: 2;
+
+        }            
+        
+
+        .who_are_we_text_container
+        {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+
+            @include normalise_text_parts($text_color: black);   
+            #who_are_we_text_resize
+            {
+                font-size: 20px;
+
+            }         
+            #darken_highlight
+            {
+                color: $less_contrasted_color;
+            }
+
+            
+        }
+        
+
+
+    }
+
+}
+
+
+
+@media (max-width: $responsive_trigger_width)
+{
+    .yellow_stylish
+    {
+        height: 350px !important;
+    }
+
+    .who_are_we_container
+    {
+        
+        flex-direction: column;
+        margin-top: 2% !important;   
+    }
+
+    .who_are_we_text_container
+    {
+        width: 90% !important;
+        gap: 10%;
+    }
+
+}

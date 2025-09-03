@@ -1,0 +1,178 @@
+@import "variable";
+
+*
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+.navbar_root
+{
+    /*Temp color pour debug*/
+    background-color: $website-background-color;
+
+
+
+    .navbar_container
+    {
+        height: $navbar_heigh;
+
+        padding: 10px;
+        
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+
+        .logo_container
+        {
+            margin: $navbar_elements_margin;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            cursor: pointer;
+            
+            .logo
+            {
+                width: 90px;
+                height: 90px;
+            }
+
+            .logo_text
+            {
+                font-size: 40px;
+            }
+        }
+
+
+
+        .navbar_buttons_container
+        {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: $navbar_elements_gap;
+
+            width: 100%;
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+
+    }
+}
+
+.header_showcase
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/media/showcase_background.jpg);
+    height: $header_heigh;
+    background-size: cover;
+    background-position-y: 50%;
+    width: device-width;
+    padding: 10%;
+
+
+    .showcase_text_container
+    {
+        
+        color: $website-background-color ;
+
+        gap: 10px;
+
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        
+        @include normalise_text_parts
+
+
+    }
+
+}
+
+
+
+.btn
+{
+    @include main_button($text_color:black, $button_background:white);
+    
+    &:hover
+    {
+        @include main_button($text_color:black, $button_background: darken(white, 20%));
+    }
+}
+
+.btn_filled
+{
+    @include main_button($text_color:black, $button_background: $contrasted_color);
+
+    &:hover
+    {
+        @include main_button($text_color:black, $button_background: $less_contrasted_color)
+    }
+
+
+}
+
+
+
+/*when desktop or higher*/
+@media (min-width: $responsive_trigger_width)
+{
+
+    #hamburger_menu
+    {
+        display: none;
+    }
+}
+
+
+
+/*when phone mode*/
+@media (max-width: $responsive_trigger_width)
+{
+
+    .navbar_buttons_container
+    {
+        width: 70px !important;
+        height: 70px !important;
+        margin-right: 2% !important;
+        margin-left: 2% !important;
+        
+    }
+
+
+    #hamburger_menu
+    {  
+        object-fit: cover;
+        object-position: center;
+    }
+    #burger
+    {
+        width: 80%;
+        height: 80%;
+    }
+
+    .showcase_text_container
+    {
+        transition: all 0.3s;
+        text-align: justify;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header_showcase
+    {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/media/showcase_background.jpg);
+        background-position-x: center;
+    }
+
+    #call_to_action
+    {
+        display: flex;
+    }
+}
+
+

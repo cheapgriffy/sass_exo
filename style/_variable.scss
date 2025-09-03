@@ -1,0 +1,80 @@
+
+/*#############
+Color variables
+###############*/
+$website-background-color: white;
+$contrasted_color : yellow;
+$less_contrasted_color: darken($contrasted_color, 10%);
+
+/*#######################
+Misc properties variables
+########################*/
+$main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$navbar_elements_margin: 10px;
+$navbar_elements_gap: 20px;
+
+/*#############
+Sizes variables
+##########€####*/
+$navbar_heigh: 70px;
+$header_heigh: 400px;
+$who_are_we_heigh: 800px;
+$responsive_trigger_width: 800px;
+
+
+/*#############
+Functions parts
+###############*/
+@mixin main_button ($text_color: black, $button_background: yellow)
+{
+    transition: all 0.3s;
+
+    color: $text_color;
+    background: $button_background;
+    border-radius: 10px;
+    font-weight: 600;
+    
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    width: 130px;
+    height: 50px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* pour respecter le format des bouts de teste que le site met en place
+doit faire partie d'une div, et utiliser*/
+@mixin normalise_text_parts($text_color: white)
+{
+
+    .name_highlight
+    {
+        color: $contrasted_color;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .title_highlight
+    {
+        font-size: 50px;
+        color: $text_color;
+    }
+    .paragraph_highlight
+    {
+        width: 400px;
+        color: $text_color;
+    }
+}
+
+@media (max-width: $responsive_trigger_width)
+{
+    .discared_from_responsive
+    {
+        display: none;
+    }
+}
